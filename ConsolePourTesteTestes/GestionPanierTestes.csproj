@@ -57,9 +57,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsolePourTest\ConsolePourTest.csproj">
+    <ProjectReference Include="..\ConsolePourTest\GetionPanier.csproj">
       <Project>{aff074e6-3c0a-4a4a-bcc5-6823d00ebb89}</Project>
-      <Name>ConsolePourTest</Name>
+      <Name>GetionPanier</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
