@@ -7,28 +7,34 @@ namespace ConsolePourTesteTestes
     [TestClass]
     public class ProduitTest
     {
-        [TestMethod]
-        public void ImpossibleDeMettrëPrixInfOuEgal0()
+        [DataTestMethod]  
+        [DataRow("0")]
+        [DataRow("-1")]
+        public void ValiderPrix(string rawPrix)
         {
+            var prix = decimal.Parse(rawPrix);
             var exception = Assert.ThrowsException<Exception>(() =>
             {
                 var produit = new Produit
                 {
                     Nom = "Bouteille Bordeaux",
-                    Prix = 0
+                    Prix = prix
                 };
             });
             Assert.AreEqual("Prix ne peut pas être négatif", exception.Message);
         }
 
-        [TestMethod]
-        public void ImpossibleDeMettreNomVide()
+        [DataTestMethod]
+        [DataRow(null)]
+        [DataRow("")]
+        [DataRow("           ")]
+        public void ImpossibleDeMettreNomVide(string nom)
         {
             Assert.ThrowsException<Exception>(() =>
             {
                 var produit = new Produit
                 {
-                    Nom = "",
+                    Nom = nom,
                     Prix = 0
                 };
                 produit.Valider();
