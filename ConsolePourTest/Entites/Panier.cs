@@ -10,7 +10,7 @@ namespace ConsolePourTest.Entites
     {
         public Panier()
         {
-            this.Lignes = new List<LignePanier>();
+            this.Lignes = new List<LignePanier>();// sempre iniciar as listas
         }
         public List<LignePanier> Lignes { get; set; }
 
@@ -22,6 +22,10 @@ namespace ConsolePourTest.Entites
             //    total += l.Quantite * l.Produit.Prix;
             //}
             //return total;
+            if (!Lignes.Any())
+            {
+                return 0;
+            }
             var totalLignes = Lignes.Sum(x => x.Produit.Prix * x.Quantite);//LINQ
             return totalLignes + FraisPort;
         }

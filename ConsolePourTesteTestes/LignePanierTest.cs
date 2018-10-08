@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace ConsolePourTesteTestes
 {
     [TestClass]
-    public class PanierTest
+    public class LignePanierTest
     {
         [TestMethod]
         public void TestMethod1()
