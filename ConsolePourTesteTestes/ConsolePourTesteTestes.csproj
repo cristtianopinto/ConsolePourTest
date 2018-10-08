@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="LignePanierTest.cs" />
     <Compile Include="PanierTest.cs" />
+    <Compile Include="ProduitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
