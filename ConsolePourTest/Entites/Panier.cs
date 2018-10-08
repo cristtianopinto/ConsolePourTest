@@ -26,8 +26,10 @@ namespace ConsolePourTest.Entites
             {
                 return 0;
             }
+
+
             var totalLignes = Lignes.Sum(x => x.Produit.Prix * x.Quantite);//LINQ
-            return totalLignes + FraisPort;
+            return totalLignes > 100 ? totalLignes : (totalLignes + FraisPort);
         }
     }
 }
