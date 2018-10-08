@@ -11,5 +11,12 @@ namespace ConsolePourTest.Entites
         public Produit Produit { get; set; }
 
         public int Quantite { get; set; }
+        public void Valider()
+        {
+            if (Quantite < 0)
+                throw new Exception("Quantité doit être positive");
+            if(this.Produit == null)
+                throw new Exception("Produit est requis");
+        }
     }
 }
