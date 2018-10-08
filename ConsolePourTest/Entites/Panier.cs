@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConsolePourTest.Entites
 {
-    class Panier
+    public class Panier
     {
+        public Panier()
+        {
+            this.Lignes = new List<LignePanier>();
+        }
         public List<LignePanier> Lignes { get; set; }
 
         public decimal FraisPort { get; set; } = 10;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsolePourTest.Entites
 {
-    class LignePanier
+    public class LignePanier
     {
         public Produit Produit { get; set; }
 
