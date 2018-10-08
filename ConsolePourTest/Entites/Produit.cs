@@ -30,7 +30,7 @@ namespace ConsolePourTest.Entites
         {
             if(Prix <= 0)
                 throw new Exception("Prix ne peut pas être négatif");
-            if (string.IsNullOrEmpty(Nom))
+            if (string.IsNullOrWhiteSpace(Nom))
                 throw new Exception("Nom est requis");
         }
     }
